@@ -1,0 +1,9 @@
+[package]
+name = "rvld"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+static_assertions = "1.1"
+zero = "0.1.2"
