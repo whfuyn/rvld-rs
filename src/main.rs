@@ -1,3 +1,5 @@
+#![feature(cstr_from_bytes_until_nul)]
+
 use anyhow::*;
 use std::env;
 use std::fs::File;
@@ -21,6 +23,7 @@ fn main() -> Result<()> {
 
     let elf = ElfFile::new(&content)?;
     println!("elf sections: {}", elf.section_num());
+    elf.print();
 
     Ok(())
 }
